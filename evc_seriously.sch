@@ -17,8 +17,8 @@ $Comp
 L MCU_ST_STM32F3:STM32F303K8Tx U?
 U 1 1 5F7AE5D9
 P 4500 3250
-F 0 "U?" H 4450 2161 50  0000 C CNN
-F 1 "STM32F303K8Tx" H 4450 2070 50  0000 C CNN
+F 0 "U?" H 4050 4100 50  0000 C CNN
+F 1 "STM32F303K8Tx" H 4000 2300 50  0000 C CNN
 F 2 "Package_QFP:LQFP-32_7x7mm_P0.8mm" H 4000 2350 50  0001 R CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00092070.pdf" H 4500 3250 50  0001 C CNN
 	1    4500 3250
@@ -46,14 +46,12 @@ F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresigh
 	1    6800 2900
 	1    0    0    -1  
 $EndComp
-Text Notes 7800 4850 0    50   ~ 0
+Text Notes 2750 7250 0    50   ~ 0
 TCA9517 I2C bus repeater
 Text Notes 7850 4950 0    50   ~ 0
 MPS3510A monolithic buck regulator
-Text Notes 7950 5050 0    50   ~ 0
+Text Notes 4550 6800 0    50   ~ 0
 MIC2981 8-channel high voltage source driver
-Text Notes 8050 5150 0    50   ~ 0
-some random LT boost part
 $Comp
 L Switch:SW_Push SW?
 U 1 1 5F7B13AD
@@ -186,17 +184,17 @@ F 3 "~" H 7550 5550 50  0001 C CNN
 	1    7550 5550
 	1    0    0    -1  
 $EndComp
-Text Notes 8200 5250 0    50   ~ 0
+Text Notes 2700 5950 0    50   ~ 0
 LM4781/LM9022 filament driver
 $Comp
 L Connector:USB_B_Mini J?
 U 1 1 5F7B8668
-P 4500 5400
-F 0 "J?" H 4557 5867 50  0000 C CNN
-F 1 "USB_B_Mini" H 4557 5776 50  0000 C CNN
-F 2 "" H 4650 5350 50  0001 C CNN
-F 3 "~" H 4650 5350 50  0001 C CNN
-	1    4500 5400
+P 9550 1950
+F 0 "J?" H 9607 2417 50  0000 C CNN
+F 1 "USB_B_Mini" H 9607 2326 50  0000 C CNN
+F 2 "" H 9700 1900 50  0001 C CNN
+F 3 "~" H 9700 1900 50  0001 C CNN
+	1    9550 1950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -303,23 +301,56 @@ Text Notes 3400 1750 0    50   ~ 0
 $Comp
 L Jumper:SolderJumper_2_Bridged JP?
 U 1 1 5F80C17D
-P 7050 1100
-F 0 "JP?" H 7050 1305 50  0000 C CNN
-F 1 "SolderJumper_2_Bridged" H 7050 1214 50  0000 C CNN
-F 2 "" H 7050 1100 50  0001 C CNN
-F 3 "~" H 7050 1100 50  0001 C CNN
-	1    7050 1100
+P 2950 4750
+F 0 "JP?" H 2950 4955 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2950 4864 50  0000 C CNN
+F 2 "" H 2950 4750 50  0001 C CNN
+F 3 "~" H 2950 4750 50  0001 C CNN
+	1    2950 4750
 	1    0    0    -1  
 $EndComp
 $Comp
 L Jumper:SolderJumper_2_Bridged JP?
 U 1 1 5F80C42A
-P 7050 1250
-F 0 "JP?" H 7050 1455 50  0000 C CNN
-F 1 "SolderJumper_2_Bridged" H 7050 1364 50  0000 C CNN
-F 2 "" H 7050 1250 50  0001 C CNN
-F 3 "~" H 7050 1250 50  0001 C CNN
-	1    7050 1250
+P 2950 4900
+F 0 "JP?" H 2950 5105 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2950 5014 50  0000 C CNN
+F 2 "" H 2950 4900 50  0001 C CNN
+F 3 "~" H 2950 4900 50  0001 C CNN
+	1    2950 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L evc_seriously:LM9022 U?
+U 1 1 5F7BF1AB
+P 3250 5450
+F 0 "U?" H 2900 5800 50  0000 C CNN
+F 1 "LM9022" H 3000 5100 50  0000 C CNN
+F 2 "" H 3250 5450 50  0001 C CNN
+F 3 "" H 3250 5450 50  0001 C CNN
+	1    3250 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L evc_seriously:TCA9517 U?
+U 1 1 5F7CAC11
+P 3250 6700
+F 0 "U?" H 2900 7050 50  0000 C CNN
+F 1 "TCA9517" H 3000 6350 50  0000 C CNN
+F 2 "" H 3250 6700 50  0001 C CNN
+F 3 "" H 3250 6700 50  0001 C CNN
+	1    3250 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L evc_seriously:MIC2981 U?
+U 1 1 5F8198FC
+P 5300 6000
+F 0 "U?" H 4900 6550 50  0000 C CNN
+F 1 "MIC2981" H 5000 5450 50  0000 C CNN
+F 2 "" H 5300 6000 50  0001 C CNN
+F 3 "" H 5300 6000 50  0001 C CNN
+	1    5300 6000
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
