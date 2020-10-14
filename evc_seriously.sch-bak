@@ -1845,45 +1845,45 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole_Pad H?
+L Mechanical:MountingHole_Pad H2
 U 1 1 5F89B3C6
 P 1250 1150
-F 0 "H?" H 1350 1199 50  0000 L CNN
+F 0 "H2" H 1350 1199 50  0000 L CNN
 F 1 "MountingHole_Pad" H 1350 1108 50  0000 L CNN
-F 2 "" H 1250 1150 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1250 1150 50  0001 C CNN
 F 3 "~" H 1250 1150 50  0001 C CNN
 	1    1250 1150
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole_Pad H?
+L Mechanical:MountingHole_Pad H3
 U 1 1 5F89B9F1
 P 1450 1150
-F 0 "H?" H 1550 1199 50  0000 L CNN
+F 0 "H3" H 1550 1199 50  0000 L CNN
 F 1 "MountingHole_Pad" H 1550 1108 50  0000 L CNN
-F 2 "" H 1450 1150 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1450 1150 50  0001 C CNN
 F 3 "~" H 1450 1150 50  0001 C CNN
 	1    1450 1150
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole_Pad H?
+L Mechanical:MountingHole_Pad H4
 U 1 1 5F89BFB4
 P 1650 1150
-F 0 "H?" H 1750 1199 50  0000 L CNN
+F 0 "H4" H 1750 1199 50  0000 L CNN
 F 1 "MountingHole_Pad" H 1750 1108 50  0000 L CNN
-F 2 "" H 1650 1150 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1650 1150 50  0001 C CNN
 F 3 "~" H 1650 1150 50  0001 C CNN
 	1    1650 1150
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole_Pad H?
+L Mechanical:MountingHole_Pad H1
 U 1 1 5F896868
 P 1050 1150
-F 0 "H?" H 1150 1199 50  0000 L CNN
+F 0 "H1" H 1150 1199 50  0000 L CNN
 F 1 "MountingHole_Pad" H 1150 1108 50  0000 L CNN
-F 2 "" H 1050 1150 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1050 1150 50  0001 C CNN
 F 3 "~" H 1050 1150 50  0001 C CNN
 	1    1050 1150
 	1    0    0    -1  
