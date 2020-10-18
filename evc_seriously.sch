@@ -73,7 +73,7 @@ F 3 "~" H 10150 1600 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x05_Counter_Clockwise J4
+L Connector_Generic:Conn_02x05_Odd_Even J4
 U 1 1 5F7B231A
 P 9750 3450
 F 0 "J4" H 9800 3750 50  0000 C CNN
@@ -84,15 +84,15 @@ F 3 "~" H 9750 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x05_Counter_Clockwise J3
+L Connector_Generic:Conn_02x05_Odd_Even J3
 U 1 1 5F7B26B3
-P 9750 2750
-F 0 "J3" H 9800 3050 50  0000 C CNN
-F 1 "J_IN" H 9800 2450 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 9750 2750 50  0001 C CNN
-F 3 "~" H 9750 2750 50  0001 C CNN
-	1    9750 2750
-	1    0    0    -1  
+P 9850 2750
+F 0 "J3" H 9900 3050 50  0000 C CNN
+F 1 "J_IN" H 9900 2450 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 9850 2750 50  0001 C CNN
+F 3 "~" H 9850 2750 50  0001 C CNN
+	1    9850 2750
+	-1   0    0    1   
 $EndComp
 Text Notes 7050 6975 0    50   ~ 0
 LM4781/LM9022 filament driver
@@ -120,7 +120,7 @@ F 3 "" H 9400 2950 50  0001 C CNN
 $EndComp
 Text Label 10400 2750 2    50   ~ 0
 SDA_A
-Text Label 10400 2850 2    50   ~ 0
+Text Label 10400 2650 2    50   ~ 0
 SCL_A
 $Comp
 L power:GND #PWR040
@@ -280,11 +280,11 @@ Wire Wire Line
 Wire Wire Line
 	9500 2950 9500 2850
 Wire Wire Line
-	10100 2650 10050 2650
+	10100 2950 10050 2950
 Wire Wire Line
-	10100 2550 10050 2550
+	10100 2850 10050 2850
 Wire Wire Line
-	10100 2550 10100 2650
+	10100 2850 10100 2950
 Wire Wire Line
 	9500 2850 9500 2750
 Wire Wire Line
@@ -300,7 +300,7 @@ Wire Wire Line
 Wire Wire Line
 	9500 2550 9550 2550
 Connection ~ 9500 2650
-Connection ~ 10100 2550
+Connection ~ 10100 2850
 Wire Wire Line
 	9400 2950 9500 2950
 Connection ~ 9500 2950
@@ -413,33 +413,33 @@ Connection ~ 10250 5350
 Wire Wire Line
 	10250 5350 10600 5350
 Wire Wire Line
-	10500 2550 10100 2550
+	10500 2850 10100 2850
 $Comp
 L power:+3.3V #PWR046
 U 1 1 5F8AECA8
-P 10500 2950
-F 0 "#PWR046" H 10500 2800 50  0001 C CNN
-F 1 "+3.3V" H 10515 3123 50  0000 C CNN
-F 2 "" H 10500 2950 50  0001 C CNN
-F 3 "" H 10500 2950 50  0001 C CNN
-	1    10500 2950
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+24V #PWR045
-U 1 1 5F8A71D3
 P 10500 2550
-F 0 "#PWR045" H 10500 2400 50  0001 C CNN
-F 1 "+24V" H 10515 2723 50  0000 C CNN
+F 0 "#PWR046" H 10500 2400 50  0001 C CNN
+F 1 "+3.3V" H 10515 2723 50  0000 C CNN
 F 2 "" H 10500 2550 50  0001 C CNN
 F 3 "" H 10500 2550 50  0001 C CNN
 	1    10500 2550
 	0    1    1    0   
 $EndComp
+$Comp
+L power:+24V #PWR045
+U 1 1 5F8A71D3
+P 10500 2850
+F 0 "#PWR045" H 10500 2700 50  0001 C CNN
+F 1 "+24V" H 10515 3023 50  0000 C CNN
+F 2 "" H 10500 2850 50  0001 C CNN
+F 3 "" H 10500 2850 50  0001 C CNN
+	1    10500 2850
+	0    1    1    0   
+$EndComp
 Wire Wire Line
-	10500 2950 10050 2950
+	10500 2550 10050 2550
 Wire Wire Line
-	10400 2850 10050 2850
+	10400 2650 10050 2650
 Wire Wire Line
 	10400 2750 10050 2750
 Text Label 10400 3550 2    50   ~ 0
@@ -852,6 +852,7 @@ F 0 "C1" H 5635 1604 50  0000 R CNN
 F 1 "4.7uF" H 5635 1695 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 5788 1500 50  0001 C CNN
 F 3 "~" H 5750 1650 50  0001 C CNN
+F 4 "CL21A475KBQNNNE" H 5750 1650 50  0001 C CNN "PartNumber"
 	1    5750 1650
 	-1   0    0    1   
 $EndComp
@@ -874,6 +875,7 @@ F 0 "C2" H 5835 1604 50  0000 R CNN
 F 1 "4.7uF" H 5835 1695 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 5988 1500 50  0001 C CNN
 F 3 "~" H 5950 1650 50  0001 C CNN
+F 4 "CL21A475KBQNNNE" H 5950 1650 50  0001 C CNN "PartNumber"
 	1    5950 1650
 	-1   0    0    1   
 $EndComp
@@ -1670,8 +1672,6 @@ Wire Wire Line
 	3500 2400 3500 2700
 Text Notes 7050 6775 0    50   ~ 0
 MPS3510A monolithic buck regulator
-Wire Wire Line
-	5650 2550 5650 2650
 $Comp
 L power:+3.3V #PWR024
 U 1 1 5F8A6641
@@ -1683,20 +1683,14 @@ F 3 "" H 5650 2550 50  0001 C CNN
 	1    5650 2550
 	1    0    0    -1  
 $EndComp
-NoConn ~ 6250 4400
 NoConn ~ 6250 4100
 NoConn ~ 6250 3700
-NoConn ~ 5150 3900
 NoConn ~ 5150 3800
 NoConn ~ 5150 3500
 Text Label 6600 4000 2    50   ~ 0
 USR_LED
 Wire Wire Line
 	6250 4000 6600 4000
-Text Label 6600 3900 2    50   ~ 0
-USR_SW
-Wire Wire Line
-	6250 3900 6600 3900
 Text Label 4800 4000 0    50   ~ 0
 SWO
 Wire Wire Line
@@ -1834,17 +1828,6 @@ SWDIO
 Text Label 6600 4300 2    50   ~ 0
 SWDCLK
 $Comp
-L MCU_ST_STM32F3:STM32F303K8Tx U4
-U 1 1 5F7AE5D9
-P 5750 3600
-F 0 "U4" H 5300 4450 50  0000 C CNN
-F 1 "STM32F303K8Tx" H 5250 2650 50  0000 C CNN
-F 2 "Package_QFP:LQFP-32_7x7mm_P0.8mm" H 5250 2700 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00092070.pdf" H 5750 3600 50  0001 C CNN
-	1    5750 3600
-	1    0    0    -1  
-$EndComp
-$Comp
 L Mechanical:MountingHole_Pad H2
 U 1 1 5F89B3C6
 P 1250 1150
@@ -1888,8 +1871,53 @@ F 3 "~" H 1050 1150 50  0001 C CNN
 	1    1050 1150
 	1    0    0    -1  
 $EndComp
-NoConn ~ 1050 1250
-NoConn ~ 1250 1250
-NoConn ~ 1450 1250
-NoConn ~ 1650 1250
+$Comp
+L power:GND #PWR0102
+U 1 1 5F8E4081
+P 1650 1350
+F 0 "#PWR0102" H 1650 1100 50  0001 C CNN
+F 1 "GND" H 1655 1177 50  0000 C CNN
+F 2 "" H 1650 1350 50  0001 C CNN
+F 3 "" H 1650 1350 50  0001 C CNN
+	1    1650 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 1350 1650 1300
+Wire Wire Line
+	1650 1300 1450 1300
+Wire Wire Line
+	1450 1300 1450 1250
+Connection ~ 1650 1300
+Wire Wire Line
+	1650 1300 1650 1250
+Wire Wire Line
+	1450 1300 1250 1300
+Wire Wire Line
+	1250 1300 1250 1250
+Connection ~ 1450 1300
+Wire Wire Line
+	1250 1300 1050 1300
+Wire Wire Line
+	1050 1300 1050 1250
+Connection ~ 1250 1300
+NoConn ~ 5150 3900
+Text Label 6600 4400 2    50   ~ 0
+USR_SW
+Wire Wire Line
+	5650 2550 5650 2650
+$Comp
+L MCU_ST_STM32F3:STM32F303K8Tx U4
+U 1 1 5F7AE5D9
+P 5750 3600
+F 0 "U4" H 5300 4450 50  0000 C CNN
+F 1 "STM32F303K8Tx" H 5250 2650 50  0000 C CNN
+F 2 "Package_QFP:LQFP-32_7x7mm_P0.8mm" H 5250 2700 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00092070.pdf" H 5750 3600 50  0001 C CNN
+	1    5750 3600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6250 3900
+Wire Wire Line
+	6600 4400 6250 4400
 $EndSCHEMATC
