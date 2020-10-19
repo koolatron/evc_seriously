@@ -354,8 +354,6 @@ Wire Wire Line
 Wire Wire Line
 	7400 3950 7400 3800
 Wire Wire Line
-	8650 3700 8350 3700
-Wire Wire Line
 	8250 2800 8650 2800
 Wire Wire Line
 	9200 4300 9200 4650
@@ -625,16 +623,12 @@ Wire Wire Line
 Wire Wire Line
 	6750 5250 6900 5250
 Wire Wire Line
-	8000 4950 8350 4950
-Wire Wire Line
-	8350 4950 8350 3700
-Wire Wire Line
-	8250 4850 8250 2800
+	8000 4950 8250 4950
 Connection ~ 8000 4950
 Wire Wire Line
 	8000 4950 8000 5000
 Wire Wire Line
-	8000 4850 8250 4850
+	8000 4850 8350 4850
 Connection ~ 8000 4850
 Wire Wire Line
 	8000 4800 8000 4850
@@ -1683,50 +1677,13 @@ F 3 "" H 5650 2550 50  0001 C CNN
 	1    5650 2550
 	1    0    0    -1  
 $EndComp
-NoConn ~ 6250 4100
+NoConn ~ 6250 4400
 NoConn ~ 6250 3700
-NoConn ~ 5150 3800
 NoConn ~ 5150 3500
-Text Label 6600 4000 2    50   ~ 0
+Text Label 4800 4200 0    50   ~ 0
 USR_LED
-Wire Wire Line
-	6250 4000 6600 4000
 Text Label 4800 4000 0    50   ~ 0
 SWO
-Wire Wire Line
-	5150 4000 4800 4000
-Wire Wire Line
-	4750 3600 4800 3600
-$Comp
-L evc_seriously:+3V3_B #PWR021
-U 1 1 5FFE7843
-P 4750 3600
-F 0 "#PWR021" H 4750 3450 50  0001 C CNN
-F 1 "+3V3_B" H 4750 3775 50  0000 C CNN
-F 2 "" H 4750 3600 50  0001 C CNN
-F 3 "" H 4750 3600 50  0001 C CNN
-	1    4750 3600
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	5150 3600 5100 3600
-Wire Wire Line
-	4800 4100 5150 4100
-Wire Wire Line
-	4800 4200 5150 4200
-$Comp
-L Device:R R9
-U 1 1 5FD8C22C
-P 4950 3600
-F 0 "R9" H 5020 3646 50  0000 L CNN
-F 1 "22" H 5020 3555 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 4880 3600 50  0001 C CNN
-F 3 "~" H 4950 3600 50  0001 C CNN
-	1    4950 3600
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4800 2900 5150 2900
 Wire Wire Line
 	4750 3100 4800 3100
 Wire Wire Line
@@ -1771,10 +1728,6 @@ Wire Wire Line
 Wire Wire Line
 	6850 2900 6250 2900
 Wire Wire Line
-	5150 4400 4800 4400
-Wire Wire Line
-	5150 4300 4800 4300
-Wire Wire Line
 	6250 4200 6600 4200
 Wire Wire Line
 	6250 4300 6600 4300
@@ -1782,9 +1735,9 @@ Text Label 4800 4400 0    50   ~ 0
 SDA_A
 Text Label 4800 4300 0    50   ~ 0
 SCL_A
-Text Label 4800 4200 0    50   ~ 0
+Text Label 6600 4000 2    50   ~ 0
 I2C_EN
-Text Label 4800 4100 0    50   ~ 0
+Text Label 6600 4100 2    50   ~ 0
 5V_EN
 Text Label 6600 3800 2    50   ~ 0
 FIL_PWM
@@ -1902,10 +1855,25 @@ Wire Wire Line
 	1050 1300 1050 1250
 Connection ~ 1250 1300
 NoConn ~ 5150 3900
-Text Label 6600 4400 2    50   ~ 0
+Text Label 4800 4100 0    50   ~ 0
 USR_SW
 Wire Wire Line
 	5650 2550 5650 2650
+NoConn ~ 6250 3900
+Wire Wire Line
+	6600 4000 6250 4000
+Wire Wire Line
+	6600 4100 6250 4100
+Wire Wire Line
+	5150 4400 4800 4400
+Wire Wire Line
+	5150 4300 4800 4300
+Wire Wire Line
+	5150 4100 4800 4100
+Wire Wire Line
+	5150 4000 4800 4000
+Wire Wire Line
+	4800 2900 5150 2900
 $Comp
 L MCU_ST_STM32F3:STM32F303K8Tx U4
 U 1 1 5F7AE5D9
@@ -1917,7 +1885,41 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 	1    5750 3600
 	1    0    0    -1  
 $EndComp
-NoConn ~ 6250 3900
 Wire Wire Line
-	6600 4400 6250 4400
+	4800 4200 5150 4200
+$Comp
+L Device:R R9
+U 1 1 5FD8C22C
+P 4650 3800
+F 0 "R9" H 4720 3846 50  0000 L CNN
+F 1 "22" H 4720 3755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4580 3800 50  0001 C CNN
+F 3 "~" H 4650 3800 50  0001 C CNN
+	1    4650 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L evc_seriously:+3V3_B #PWR021
+U 1 1 5FFE7843
+P 4450 3800
+F 0 "#PWR021" H 4450 3650 50  0001 C CNN
+F 1 "+3V3_B" H 4450 3975 50  0000 C CNN
+F 2 "" H 4450 3800 50  0001 C CNN
+F 3 "" H 4450 3800 50  0001 C CNN
+	1    4450 3800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4450 3800 4500 3800
+NoConn ~ 5150 3600
+Wire Wire Line
+	4800 3800 5150 3800
+Text Label 4800 3800 0    50   ~ 0
+SENSE
+Wire Wire Line
+	8350 3700 8350 4850
+Wire Wire Line
+	8350 3700 8650 3700
+Wire Wire Line
+	8250 4950 8250 2800
 $EndSCHEMATC
