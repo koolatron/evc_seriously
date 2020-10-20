@@ -623,12 +623,12 @@ Wire Wire Line
 Wire Wire Line
 	6750 5250 6900 5250
 Wire Wire Line
-	8000 4950 8250 4950
+	8000 4950 8350 4950
 Connection ~ 8000 4950
 Wire Wire Line
 	8000 4950 8000 5000
 Wire Wire Line
-	8000 4850 8350 4850
+	8000 4850 8250 4850
 Connection ~ 8000 4850
 Wire Wire Line
 	8000 4800 8000 4850
@@ -1737,7 +1737,7 @@ Text Label 4800 4300 0    50   ~ 0
 SCL_A
 Text Label 6600 4000 2    50   ~ 0
 I2C_EN
-Text Label 6600 4100 2    50   ~ 0
+Text Label 4800 3600 0    50   ~ 0
 5V_EN
 Text Label 6600 3800 2    50   ~ 0
 FIL_PWM
@@ -1863,8 +1863,6 @@ NoConn ~ 6250 3900
 Wire Wire Line
 	6600 4000 6250 4000
 Wire Wire Line
-	6600 4100 6250 4100
-Wire Wire Line
 	5150 4400 4800 4400
 Wire Wire Line
 	5150 4300 4800 4300
@@ -1911,15 +1909,17 @@ F 3 "" H 4450 3800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4450 3800 4500 3800
-NoConn ~ 5150 3600
+NoConn ~ 6250 4100
 Wire Wire Line
 	4800 3800 5150 3800
 Text Label 4800 3800 0    50   ~ 0
 SENSE
 Wire Wire Line
-	8350 3700 8350 4850
+	5150 3600 4800 3600
+Wire Wire Line
+	8350 4950 8350 3700
 Wire Wire Line
 	8350 3700 8650 3700
 Wire Wire Line
-	8250 4950 8250 2800
+	8250 4850 8250 2800
 $EndSCHEMATC
